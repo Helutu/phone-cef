@@ -1,0 +1,245 @@
+#iphone .face .screen>.app.contacts {
+    padding: 7.6px 0 44.64px 0;
+    height: calc(100% - 7.6px - 44.64px);
+}
+#iphone .face .screen>.app.recents {
+    padding: 7.6px 0 60.64px 0 !important;
+}
+
+
+
+#iphone .face .screen>.app.contacts .container .contact-info {
+    margin: 9px 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #999999;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 13.5px;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info .name {
+    font-size: 21px;
+    text-align: center;
+    border: 0;
+    outline: 0;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'SF Pro Display';
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .icon-wrapper {
+    height: 33px;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #057BFA;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .icon-wrapper .icon {
+    height: 15.25px;
+    line-height: 15.25px;
+    width: 15.25px;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .icon-wrapper .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .title {
+    font-size: 12px;
+    text-align: center;
+    color: #007AFF;
+    margin-top: 2px;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group {
+    display: flex;
+    flex-direction: column;
+    height: 45vh;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group .title {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 4px 10.5px;
+    font-size: 14px;
+    font-weight: 700;
+    user-select: none;
+}
+
+
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper,
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper {
+    padding: 0 10.5px;
+    transition: all 0.15s linear;
+    cursor: pointer;
+    /* here */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper:focus,
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper:active,
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper:focus,
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper:active {
+    background-color: #f7f7f7;
+}
+
+
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper .contact {
+    padding: 11.5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 11.5px 0;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .basic-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .basic-info .caller {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call.missed .basic-info .caller {
+    color: #FF3737;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .basic-info .call-type {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .datetime {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .info-icon {
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #007AFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 9.5px;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .info-icon svg {
+    width: 3.2px;
+    height: 7.8px;
+    line-height: 7.8px;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .info-icon svg path {
+    fill: #007AFF;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .info-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: 0.15s linear;
+}
+
+
+#iphone .face .screen>.app.contacts .container .workspace .info-row.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .info-row.clickable:active,
+#iphone .face .screen>.app.contacts .container .workspace .info-row.clickable:focus {
+    background-color: #f7f7f7;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .info-row .title {
+    font-size: 14px;
+    margin-bottom: 7px;
+    line-height: 1;
+}
+
+
+#iphone .face .screen>.app.contacts .container .workspace .info-row .value {
+    color: #057BFA;
+    font-size: 18px;
+}
+
+#iphone .face .screen>.app.contacts .container .workspace .info-row .button {
+    font-size: 14px;
+    color: #057BFA;
+}
+#iphone .face .screen>.app.contacts .container .workspace .info-row .value.editNumber {
+    border: 0;
+    outline: 0;
+}

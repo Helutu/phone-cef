@@ -1,0 +1,176 @@
+#iphone .face .screen > .app.phone {
+  padding: 52.4px 36.5px 97px 31.5px;
+  height: calc(100% - 40.4px - 97px);
+}
+#iphone .face .screen > .app.phone .container .number-utility {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#iphone .face .screen > .app.phone .container .number-wrapper {
+  min-height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#iphone .face .screen > .app.phone .container .number-wrapper {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#iphone .face .screen > .app.phone .container .number-wrapper .number {
+  font-size: 31px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.phone
+  .container
+  .number-wrapper
+  .number::-webkit-outer-spin-button,
+#iphone
+  .face
+  .screen
+  > .app.phone
+  .container
+  .number-wrapper
+  .number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#iphone .face .screen > .app.phone .container .add-number {
+  cursor: pointer;
+  padding: 4px;
+}
+
+#iphone .face .screen > .app.phone .container .add-number .title {
+  color: #157efb;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#iphone .face .screen > .app.phone .container .keypad {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  margin-bottom: 27.3px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key {
+  width: 56px;
+  height: 56px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.15s linear;
+  margin-top: 12px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key:active,
+#iphone .face .screen > .app.phone .container .keypad .key:focus {
+  background-color: #c8c8c8;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.backspace {
+  background-color: transparent !important;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.inactive {
+  background-color: transparent !important;
+  cursor: default;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.call {
+  background-color: #53d769 !important;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key .digit {
+  font-size: 27px;
+  line-height: 1;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key .chars {
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  padding-left: 1.5px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.zero .chars {
+  font-weight: 700;
+  font-size: 10px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.asterisk .icon {
+  width: 14px;
+  height: 15px;
+  line-height: 15px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.hashtag .icon {
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.backpsace .icon {
+  width: 24px;
+  height: 18px;
+  line-height: 18px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key.call .icon {
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+}
+
+#iphone .face .screen > .app.phone .container .keypad .key .icon > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.phone
+  .container
+  .keypad
+  .key.asterisk
+  .icon
+  > svg
+  path,
+#iphone
+  .face
+  .screen
+  > .app.phone
+  .container
+  .keypad
+  .key.hashtag
+  .icon
+  > svg
+  path {
+  fill: #000000;
+}

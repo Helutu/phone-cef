@@ -1,0 +1,167 @@
+#iphone .face .screen > .homescreen {
+  padding: 16px 13px 82.8px 13px;
+  height: calc(100% - 16px - 82.8px);
+  
+}
+
+#iphone .face .screen > .app.homescreen .Scontainer {
+  overflow: visible;
+}
+
+#iphone .face .screen > .app.homescreen .Scontainer .apps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#iphone .face .screen > .app.homescreen .Scontainer .apps .app-wrapper {
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iphone .face .screen > .app.homescreen .Scontainer .apps .app-wrapper .app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 56px;
+  cursor: pointer;
+  margin-bottom: 17.6px;
+  position: relative;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.homescreen
+  .Scontainer
+  .apps
+  .app-wrapper
+  .app
+  .icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.homescreen
+  .Scontainer
+  .apps
+  .app-wrapper
+  .app
+  .icon
+  img {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.homescreen
+  .Scontainer
+  .apps
+  .app-wrapper
+  .app
+  .title {
+  margin-top: 5.4px;
+  font-size: 11px;
+  font-weight: 300;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 56px;
+  text-align: center;
+}
+
+
+#iphone .face .screen > .app.homescreen .dock {
+  position: absolute;
+  bottom: 0;
+  left: 5.5px;
+  right: 5.5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+    margin-bottom: 10px;
+  /* margin-bottom: 20px; */
+}
+
+#iphone .face .screen > .app.homescreen .dock .dock-apps {
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#iphone .face .screen > .app.homescreen .dock .dock-apps .app {
+  position: relative;
+  min-height: 44px;
+  max-height: 44px;
+  min-width: 44px;
+  max-width: 44px;
+  cursor: pointer;
+}
+
+#iphone .face .screen > .app.homescreen .dock .dock-apps .app .icon {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#iphone .face .screen > .app.homescreen .dock .dock-apps .app .icon img {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.homescreen
+  .apps
+  .app-wrapper
+  .app
+  .notification-counter,
+#iphone
+  .face
+  .screen
+  > .app.homescreen
+  .dock
+  .dock-apps
+  .app
+  .notification-counter {
+  position: absolute;
+  right: -7.5px;
+  top: -7.5px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #ff3737;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.homescreen
+  .apps
+  .app-wrapper
+  .app
+  .notification-counter {
+  right: -3.5px;
+  top: -6.5px;
+}

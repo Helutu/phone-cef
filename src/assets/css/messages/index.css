@@ -1,0 +1,858 @@
+#iphone .face .screen > .app.messages,
+#iphone .face .screen > .app.navigator {
+  padding: 7.6px 0 0 0;
+  height: calc(100% - 7.6px);
+  
+}
+
+#iphone .face .screen > .app.messages .container .workspace.chat {
+  border-top: none;
+  display: flex;
+  flex-direction: column-reverse;
+  /* align-items: center; */
+  flex-wrap: nowrap;
+  padding: 0 10.5px 10px 10.5px;
+  overflow: hidden;
+  height: 58vh;
+  overflow: auto;
+    
+}
+
+#iphone .face .screen > .app.messages .container .workspace .message-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 14.9px 17.5px 14.9px 4.5px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  user-select: none;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper:focus,
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper:active {
+  background-color: #f7f7f7;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .dot-block {
+  min-width: 6px;
+  margin-right: 4px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .dot-block,
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .dot-block
+  .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #2788fb;
+  border-radius: 50%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper {
+  margin-right: 7.5px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper
+  .icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #999999;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper
+  .icon.img {
+  background-color: transparent;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper
+  .icon
+  > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper
+  .icon
+  > svg
+  circle,
+#iphone
+  .face
+  .screen
+  > .app.new-contact
+  .container
+  .workspace
+  .basic-info
+  .icon
+  svg
+  circle {
+  fill: none;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #999999;
+  stroke-linecap: round;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .icon-wrapper
+  .icon
+  > svg
+  path,
+#iphone
+  .face
+  .screen
+  > .app.new-contact
+  .container
+  .workspace
+  .basic-info
+  .icon
+  svg
+  path {
+  fill: #999999;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7.5px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info
+  .sender {
+  font-size: 14px;
+  font-weight: 700;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info
+  .info {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info
+  .info
+  .datetime {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+#iphone .face .screen > .app.messages .container .workspace.chat .datetime {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  text-align: center;
+}
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: fit-content;
+}
+#iphone .face .screen > .app .app-input .input-group .send .icon img {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  > :first-child {
+  margin-top: auto !important;
+}
+
+#iphone .face .screen > .app.messages .container .workspace.chat .datetime {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  text-align: center;
+}
+
+#iphone
+  .face
+  .screen.dark-theme
+  > .app.messages
+  .container
+  .workspace.chat
+  .datetime {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: fit-content;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group:last-child {
+  margin-bottom: 0;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group.my {
+  align-items: flex-end;
+  
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message {
+  max-width: 70%;
+  width: fit-content;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 14px;
+  background-color: #e5e5ea;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message.image {
+  padding: 0;
+  height: 100%;
+  min-height: 150px;
+  overflow: hidden;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message.image
+  img {
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+#iphone
+  .face
+  .screen.dark-theme
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group.my
+  .message {
+ 
+  color: #ffffff;
+  background-color: #53d769;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message:last-child::before,
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group.my
+  .message:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group.my
+  .message:last-child::before {
+  content: none;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message:last-child::before {
+  left: -5px;
+  background-image: url("../../icons/message_y.svg");
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group.my
+  .message:last-child::after {
+  right: -5px;
+  background-image: url("../../icons/message_my.svg");
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.chat
+  .messages-group
+  .message.image::after {
+  content: none !important;
+}
+
+#iphone .face .screen > .app.messages .container .workspace.new-chat {
+  padding-bottom: 10px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  padding: 7.5px 10.5px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#iphone
+  .face
+  .screen.dark-theme
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header {
+  background-color: #2a2a2a;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#iphone
+  .face
+  .screen.dark-theme
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .title {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .reciever {
+  margin-left: 8px;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen.dark-theme
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .reciever {
+  color: #ffffff;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .reciever
+  input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: "SF Pro Display";
+  color: #000000;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen.dark-theme
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .reciever
+  input {
+  color: #ffffff;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .reciever
+  input[type="number"]::-webkit-inner-spin-button,
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .reciever
+  input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .add {
+  min-height: 16.65px;
+  max-height: 16.65px;
+  min-width: 16.65px;
+  max-width: 16.65px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .add
+  svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace.new-chat
+  .new-chat-header
+  .add
+  svg
+  path {
+  fill: #007aff;
+  fill-rule: evenodd;
+}
+#iphone .face .screen > .app .app-input {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 10.5px;
+  width: 100%;
+  min-height: fit-content;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+#iphone .face .screen > .app .app-input .camera-button {
+  margin-right: 7.5px;
+  min-height: 23.3px;
+  max-height: 23.3px;
+  min-width: 17.75px;
+  max-width: 17.75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#iphone .face .screen > .app .app-input .camera-button svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone .face .screen > .app .app-input .camera-button svg path {
+  fill: #686868;
+  transition: 0.15s linear;
+}
+
+#iphone .face .screen.dark-theme > .app .app-input .camera-button svg path {
+  fill: #8b8b8b;
+}
+
+#iphone .face .screen > .app .app-input .input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+#iphone .face .screen > .app .app-input .input-group input {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+  border-radius: 14px;
+  padding: 6px 30px 6px 11px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  font-family: "SF Pro Display";
+  margin: 0;
+  background-color: transparent;
+}
+
+#iphone .face .screen.dark-theme > .app .app-input .input-group input {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+#iphone .face .screen > .app .app-input .input-group .send {
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4px;
+  border: none;
+  outline: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #53d769;
+  cursor: pointer;
+}
+
+#iphone .face .screen > .app .app-input.new .input-group .send {
+  background-color: #167efc;
+}
+
+#iphone .face .screen > .app .app-input .input-group .send .icon {
+  height: 12px;
+  line-height: 12px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info
+  .info
+  .icon {
+  width: 5px;
+  line-height: 9px;
+  min-height: 9px;
+  margin-left: 5px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info
+  .info
+  .icon
+  svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .basic-info
+  .info
+  .icon
+  svg
+  path {
+  fill: rgba(0, 0, 0, 0.4);
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .message-text {
+  font-size: 12px;
+  line-height: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  max-height: 26px;
+  overflow: hidden;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.messages
+  .container
+  .workspace
+  .message-wrapper
+  .message
+  .message-text
+  p {
+  margin: 0;
+  word-break: break-word;
+}

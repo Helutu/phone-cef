@@ -1,0 +1,100 @@
+#iphone .face .screen > .app.settings .container .workspace .rows {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#iphone .face .screen > .app.settings .container .workspace .rows .row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 11.5px;
+  background: #fffefe;
+  width: 90%;
+  border-radius: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#iphone .face .screen > .app.settings .container .workspace .rows .row.profile {
+  margin-bottom: 20px;
+  height: 8vh;
+}
+
+#iphone .face .screen > .app.settings .container .workspace .rows .row.profile .details .profile-img {
+  border-radius: 50%;
+  background: #e9e9e8;
+  position: relative;
+  height: 45px;
+}
+#iphone .face .screen > .app.settings .container .workspace .rows .row.profile .details .profile-img img {
+  width: 45px;
+  height: 45px;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details .about p {
+    padding-left: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.details .about p:nth-child(2) {
+    color: grey;
+    font-size: 14px;
+}
+
+#iphone .face .screen > .app.settings .container .workspace .rows .row .icon {
+  min-width: 22px;
+  max-width: 22px;
+  min-height: 22px;
+  max-height: 22px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-right: 7px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.settings
+  .container
+  .workspace
+  .rows
+  .row
+  .icon
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+#iphone .face .screen > .app.settings .container .workspace .rows .row .info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 11.5px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app.settings
+  .container
+  .workspace
+  .rows
+  .row
+  .info
+  .title {
+  color: #000000;
+  font-size: 14px;
+}
+
+#iphone .face .screen > .app .container .workspace {
+  border-top: 0;
+}

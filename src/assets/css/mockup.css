@@ -1,0 +1,499 @@
+#iphone {
+  position: absolute;
+  bottom: 33px;
+  right: 47px;
+  height: 628.99px;
+  width: 314px;
+  background: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 38px;
+  border: 2px solid #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "SF Pro Display";
+  transform-origin: right bottom;
+}
+#iphone .face {
+  padding: 11px 11.2px 11.7px 11.5px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#iphone .face .forelock {
+  position: absolute;
+  margin-top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #010100;
+  height: 22.66px;
+  width: 85.59px;
+  border-radius: 16px;
+  z-index: 9999;
+}
+
+/* #iphone .face .forelock::before,
+#iphone .face .forelock::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  border-top: 2px solid #26272b;
+  height: 5px;
+  width: 5px;
+}
+#iphone .face .forelock::before {
+  left: -2.86px;
+  border-right: 2px solid #26272b;
+  border-top-right-radius: 5px;
+}
+
+#iphone .face .forelock::after {
+  right: -2.86px;
+  border-left: 2px solid #26272b;
+  border-top-left-radius: 5px;
+} */
+#iphone .face .forelock .speaker {
+  position: absolute;
+  top: 12.3px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5.78px;
+  width: 48.5px;
+  background-color: #37383c;
+  border-radius: 2.89px;
+}
+#iphone .face .forelock .camera {
+  position: absolute;
+  top: 6px;
+  left: calc(50% + 8.3px * 3.5 );
+  transform: translateX(-50%);
+  height: 9.64px;
+  width: 9.64px;
+  background-color: #101114;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#iphone .face .forelock .camera .camera-dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: rgb(16,55,63);
+background: linear-gradient(90deg, rgba(16,55,63,1) 0%, rgba(84,63,216,1) 35%, rgba(24,10,22,1) 100%);
+}
+#iphone .face .screen {
+  height: 100%;
+  width: 100%;
+  border-radius: 28.58px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+#iphone .face .screen.wallpaper {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+#iphone .face .screen .status-bar {
+  width: 100%;
+}
+#iphone .face .screen .status-bar .bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 6.5px 15.8px 0 16.1px;
+}
+#iphone .face .screen .status-bar .time {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+#iphone .face .screen .status-bar .time.dark {
+  color: #000;
+}
+#iphone .face .screen .status-bar .status-icons {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#iphone .face .screen .status-bar .status-icons .icon {
+  margin: 0 3.5px;
+}
+#iphone .face .screen .status-bar .status-icons .icon:first-child {
+  margin-left: 0;
+}
+
+#iphone .face .screen .status-bar .status-icons .icon:last-child {
+  margin-right: 0;
+}
+
+#iphone .face .screen .status-bar .status-icons .icon > img {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone .face .screen .status-bar .status-icons .icon > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone .face .screen .status-bar .status-icons .service-icon {
+  width: 14px;
+  height: 8px;
+  line-height: 8px;
+  padding-top: 3.2px;
+}
+
+#iphone .face .screen .status-bar .status-icons .service-icon > svg {
+  height: auto;
+  width: auto;
+}
+
+#iphone .face .screen .status-bar .status-icons .service-icon > svg path {
+  fill: #ffffff;
+}
+#iphone .face .screen .status-bar .status-icons .service-icon.dark > svg path {
+  fill: #000;
+}
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="0"]
+  > svg
+  path,
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="1"]
+  > svg
+  path:nth-child(1),
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="1"]
+  > svg
+  path:nth-child(2),
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="1"]
+  > svg
+  path:nth-child(3),
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="2"]
+  > svg
+  path:nth-child(1),
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="2"]
+  > svg
+  path:nth-child(2),
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .service-icon[data-state="3"]
+  > svg
+  path:nth-child(1) {
+  opacity: 0.25;
+}
+
+#iphone .face .screen .status-bar .status-icons .battery-icon {
+  width: 20px;
+  height: 9px;
+  line-height: 9px;
+  padding-top: 2.2px;
+}
+
+#iphone .face .screen .status-bar .status-icons .battery-icon > svg {
+  height: auto;
+  width: auto;
+}
+
+#iphone .face .screen .status-bar .status-icons .battery-icon > svg g {
+  fill: #ffffff;
+  opacity: 0.38;
+}
+
+#iphone .face .screen .status-bar .status-icons .battery-icon > svg rect {
+  fill: #ffffff;
+}
+#iphone .face .screen .status-bar .status-icons .battery-icon.dark > svg rect {
+  fill: #000;
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="5"]
+  > svg
+  rect {
+  width: calc(5 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="10"]
+  > svg
+  rect {
+  width: calc(10 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="15"]
+  > svg
+  rect {
+  width: calc(15 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="20"]
+  > svg
+  rect {
+  width: calc(20 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="25"]
+  > svg
+  rect {
+  width: calc(25 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="30"]
+  > svg
+  rect {
+  width: calc(30 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="35"]
+  > svg
+  rect {
+  width: calc(35 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="40"]
+  > svg
+  rect {
+  width: calc(40 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="45"]
+  > svg
+  rect {
+  width: calc(45 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="50"]
+  > svg
+  rect {
+  width: calc(50 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="55"]
+  > svg
+  rect {
+  width: calc(55 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="60"]
+  > svg
+  rect {
+  width: calc(60 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="65"]
+  > svg
+  rect {
+  width: calc(65 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="70"]
+  > svg
+  rect {
+  width: calc(70 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="75"]
+  > svg
+  rect {
+  width: calc(75 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="80"]
+  > svg
+  rect {
+  width: calc(80 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="85"]
+  > svg
+  rect {
+  width: calc(85 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="90"]
+  > svg
+  rect {
+  width: calc(90 * 14.964px / 100);
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon[data-battery-percent="95"]
+  > svg
+  rect {
+  width: calc(95 * 14.964px / 100);
+}
+
+#iphone .face .screen .status-bar .status-icons .battery-icon.red > svg rect {
+  fill: #ff3a3c;
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon.yellow
+  > svg
+  rect {
+  fill: #ffcc01;
+}
+
+#iphone
+  .face
+  .screen
+  .status-bar
+  .status-icons
+  .battery-icon.charging
+  > svg
+  rect {
+  fill: #4cda64;
+}
+
+#iphone .face .screen .home-button-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: max-content;
+  position: absolute;
+  bottom: 0;
+}
+
+#iphone .face .screen .home-button-zone .home-button-wrapper {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iphone .face .screen .home-button-zone .home-button-wrapper .home-button {
+  width: 99.91px;
+  height: 3.72px;
+  background-color: rgba(66, 66, 66, 0.8);
+  border-radius: 1.85px;
+}

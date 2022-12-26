@@ -1,0 +1,93 @@
+#iphone .face .screen>.app.contacts {
+    padding: 7.6px 0 44.64px 0;
+    height: calc(100% - 7.6px - 44.64px);
+}
+#iphone .face .screen>.app.contacts .container .contact-info {
+    margin: 9px 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #999999;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 13.5px;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .basic-info .name {
+    font-size: 21px;
+    text-align: center;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'SF Pro Display';
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .icon-wrapper {
+    height: 33px;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #057BFA;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .icon-wrapper .icon {
+    height: 15.25px;
+    line-height: 15.25px;
+    width: 15.25px;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .icon-wrapper .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#iphone .face .screen>.app.contacts .container .contact-info .controls button .title {
+    font-size: 12px;
+    text-align: center;
+    color: #007AFF;
+    margin-top: 2px;
+}

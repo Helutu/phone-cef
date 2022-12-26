@@ -1,0 +1,68 @@
+<script>
+export default {
+    props: [
+        "id",
+        "data"
+    ],
+    data() {
+        return {
+            title: '',
+            description: ''
+        }
+    },
+    computed: {
+        req() {
+            return this.data.find(item => item.id === this.id);
+        }
+    },
+    beforeMount() {
+        this.title = this.req.title;
+        this.description = this.req.description;
+    },
+    methods: {
+        editNote() {
+            this.emitter.emit('editNote', { id: this.id, title: this.title, description: this.description })
+            this.emitter.emit('changeNotePages', 'Note')
+        }
+    }
+};
+</script>
+
+<template>
+    <div class="app notes">
+        <div class="container">
+            <div class="control-bar" style="margin-top: -10px;">
+                <div class="control" @click="this.emitter.emit('changeNotePages', 'Main')"
+                    style="color: rgb(233, 176, 54);">
+                    <svg width="25" height="25" fill="none" viewBox="0 0 25 25">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M10.25 6.75L4.75 12L10.25 17.25"></path>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M19.25 12H5"></path>
+                    </svg>
+                </div>
+                <div class="title" style="color: #f8f8f8;">Edit Note</div>
+                <div class="control add" @click="editNote()" v-if="title !== req.title || description !== req.description">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: rgb(233, 176, 54);">
+                    <path d="M6.75 19.25H17.25C18.3546 19.25 19.25 18.3546 19.25 17.25V9.82843C19.25 9.29799 19.0393 8.78929 18.6642 8.41421L15.5858 5.33579C15.2107 4.96071 14.702 4.75 14.1716 4.75H6.75C5.64543 4.75 4.75 5.64543 4.75 6.75V17.25C4.75 18.3546 5.64543 19.25 6.75 19.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8.75 19V15.75C8.75 15.1977 9.19772 14.75 9.75 14.75H14.25C14.8023 14.75 15.25 15.1977 15.25 15.75V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8.75 5V8.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>          
+
+                </div>
+            </div>
+            <div class="main" style="margin-top: -10px; margin-left: 0px; width: 250px; text-align: left;">
+                <input type="text" placeholder="title" maxlength="12" v-model="title">
+
+                <textarea id="freeform" name="freeform" rows="4" cols="50" v-model="description"  placeholder="enter text here...">
+                 enter text here...
+                </textarea>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped src="../../assets/css/notes.css">
+
+</style>
+

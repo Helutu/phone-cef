@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+#iphone .face .screen > .app.wallet .container {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#iphone .face .screen > .app.wallet .container .main {
+  padding: 10px;
+  margin-left: 12px;
+}
+#iphone .face .screen > .app.wallet .container .main .balance {
+  margin-top: 40px;
+}
+#iphone .face .screen > .app.wallet .container .main .balance h3 {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: rgba(248, 248, 248, 0.7176470588);
+}
+#iphone .face .screen > .app.wallet .container .main .balance p {
+  margin-top: -14px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #f8f8f8;
+}
+#iphone .face .screen > .app.wallet .container .main .btn-dusty {
+  width: 75px;
+  padding: 15px 10px;
+  box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 10px;
+}
+#iphone .face .screen > .app.wallet .container .main .btn-dusty-small {
+  width: 90px;
+  padding: 12px 10px;
+  box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+#iphone .face .screen > .app.wallet .container .main .row {
+  margin-top: -10px;
+  display: flex;
+  align-items: space-between;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions {
+  margin-top: 20px;
+  padding: 15px 10px;
+  box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  width: 245px;
+  height: 320px;
+  overflow: auto;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction {
+  padding: 3px;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction .emoji {
+  padding: 5px 6.5px;
+  background-color: rgba(98, 213, 228, 0.2588235294);
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction .info-main {
+  margin-left: 50px;
+  margin-top: -56px;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction .info-main h3 {
+  font-size: 17px;
+  color: #f8f8f8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction .info-main p {
+  margin-top: -16px;
+  font-size: 14px;
+  color: rgba(248, 248, 248, 0.7176470588);
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction .info-request {
+  margin-left: 196px;
+  margin-top: -45px;
+  color: #f8f8f8;
+}
+#iphone .face .screen > .app.wallet .container .main .transactions .transaction .info-request svg {
+  cursor: pointer;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer p {
+  color: rgba(248, 248, 248, 0.7176470588);
+  margin-top: -18px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer .emoji {
+  padding: 8px 10px;
+  background-color: rgba(98, 213, 228, 0.2588235294);
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 100%;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input {
+  background-color: transparent !important;
+  border: 0 !important;
+  color: #f8f8f8;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-appearance: none;
+  width: 120px;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input:focus {
+  border: 0 !important;
+  outline: none !important;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input::-moz-placeholder {
+  color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input:-ms-input-placeholder {
+  color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input::placeholder {
+  color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input::-webkit-outer-spin-button,
+#iphone .face .screen > .app.wallet .container .main .dataForTransfer input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForRequest {
+  text-align: center;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForRequest .emoji {
+  margin: auto;
+  padding: 5px 6.5px;
+  background-color: rgba(98, 213, 228, 0.2588235294);
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  border-radius: 100%;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForRequest h3 {
+  margin-top: 9px;
+  color: #f8f8f8;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForRequest p {
+  color: rgba(248, 248, 248, 0.7176470588);
+  margin-top: -18px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+#iphone .face .screen > .app.wallet .container .main .dataForRequest h2 {
+  margin-top: -12px;
+  color: #f8f8f8;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#iphone .face .screen > .app.wallet .container .main .descriptionRequest {
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+}/*# sourceMappingURL=wallet.css.map */

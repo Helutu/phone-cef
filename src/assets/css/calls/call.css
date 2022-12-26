@@ -1,0 +1,141 @@
+#iphone .face .screen>.app.call {
+    padding: 60.6px 31.5px 83px 31.5px;
+    height: calc(100% - 60.6px - 83px);
+}
+
+#iphone .face .screen>.app.call .container {
+    justify-content: space-between;
+    overflow: visible;
+}
+
+#iphone .face .screen>.app.call .container .call-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#iphone .face .screen>.app.call .container .call-header .caller {
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#iphone .face .screen>.app.call .container .call-header .call-type {
+    margin-top: 6.4px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#iphone .face .screen>.app.call .container .control-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+    gap: 15px;
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button {
+    height: 56px;
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button .icon {
+    height: 23px;
+    line-height: 23px;
+    width: 23px;
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button::after {
+    position: absolute;
+    content: attr(data-desc);
+    bottom: -22.4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button.decline {
+    background-color: #FF3737;
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button.decline .icon {
+    transform: rotate(135deg);
+}
+
+#iphone .face .screen>.app.call .container .control-buttons .button.accept {
+    background-color: #53D769;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .button::after {
+    bottom: -19.3px;
+    font-size: 14px;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 0px;
+    margin-bottom: 56.6px;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button {
+    background-color: rgba(229, 229, 229, 0.2);
+    margin-bottom: 34px;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button.inactive {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: default;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button.active {
+    background-color: #ffffff;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button .icon svg path {
+    fill: #ffffff;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button.active .icon svg path {
+    fill: #000000;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button .microphone-icon {
+    width: 16px;
+    line-height: 25px;
+    height: 25px;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button .keypad-icon,
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button .add-icon {
+    width: 22px;
+    line-height: 22px;
+    height: 22px;
+}
+
+#iphone .face .screen>.app.call.active .container .control-buttons .keypad .button .contacts-icon {
+    width: 31px;
+    line-height: 20px;
+    height: 20px;
+}

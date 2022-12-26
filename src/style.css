@@ -1,0 +1,477 @@
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#iphone .face .screen > .app {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+#iphone .face .screen > .app .container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#iphone .face .screen > .app .container > .title-bar:first-child {
+  margin-top: 15px;
+}
+
+#iphone .face .screen > .app .container .title-bar {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 0 10.5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+#iphone .face .screen > .app .container .title-bar .title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#iphone .face .screen > .app .container .title-bar .control.add {
+  cursor: pointer;
+}
+
+#iphone .face .screen > .app .container .title-bar .control.add .icon {
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+#iphone .face .screen > .app .container .title-bar .control.add .icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone .face .screen > .app .container .title-bar .control.add .icon svg path {
+  fill: #595bd3;
+}
+#iphone .face .screen > .app .container .control-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: fit-content;
+}
+
+#iphone .face .screen > .app .container .control-bar > .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+  max-width: 40%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#iphone .face .screen > .app .container .control-bar .control {
+  padding: 11px;
+  cursor: pointer;
+  color: #157efb;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.switcher {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .control-bar
+  .control.switcher
+  .switch-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 156px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .control-bar
+  .control.switcher
+  .switch-buttons
+  button {
+  background-color: #eeeeed;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  padding: 4px;
+  font-family: "SF Pro Display";
+  border: 2px solid #eeeeed;
+  cursor: pointer;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .control-bar
+  .control.switcher
+  .switch-buttons
+  button.active {
+  background-color: #fefffe;
+  color: #000;
+  cursor: default;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .control-bar
+  .control.switcher
+  .switch-buttons
+  button:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .control-bar
+  .control.switcher
+  .switch-buttons
+  button:last-child {
+  border-left: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.inactive {
+  cursor: default;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.add .icon {
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.new .icon {
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.back .icon {
+  line-height: 17px;
+  height: 17px;
+  width: 10px;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.back .title {
+  margin-left: 4.5px;
+}
+
+#iphone .face .screen > .app .container .control-bar .control.back .counter {
+  margin-left: 3px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #007aff;
+  min-height: 16px;
+  max-height: 16px;
+  min-width: 16px;
+  padding: 0 5px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iphone .face .screen > .app .container .control-bar .control .icon > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone .face .screen > .app .container .control-bar .control .icon > svg path {
+  fill: #007aff;
+}
+
+#iphone .face .screen > .app .container .search-bar {
+  margin-top: 6px;
+  margin-bottom: 14px;
+  width: 100%;
+  padding: 0 11px;
+}
+
+#iphone .face .screen > .app .container .search-bar .input-group {
+  width: 100%;
+  position: relative;
+}
+
+#iphone .face .screen > .app .container .search-bar .input-group .icon {
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 11px;
+  height: 11px;
+  width: 11px;
+}
+
+#iphone .face .screen > .app .container .search-bar .input-group .icon > svg {
+  height: 100%;
+  width: 100%;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .search-bar
+  .input-group
+  .icon
+  > svg
+  path {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+#iphone .face .screen > .app .container .search-bar .input-group input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 6.5px 5.5px 5.5px 29px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-family: "SF Pro Display";
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .search-bar
+  .input-group
+  input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+#iphone .face .screen > .app .container .workspace {
+  flex: 1 1 auto;
+  width: 100%;
+  overflow-y: auto;
+}
+
+#iphone .face .screen > .app .container .workspace {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#iphone .face .screen > .app .container .workspace::-webkit-scrollbar {
+  width: 4px;
+}
+
+#iphone .face .screen > .app .container .workspace::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #b4b4b4;
+}
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .workspace
+  .switch-control
+  input[type="checkbox"] {
+  display: none;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .workspace
+  .switch-control
+  input[type="checkbox"]
+  + label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 36px;
+  height: 22px;
+  border-radius: 16px;
+  border: 1px solid #e5e5ea;
+  transition: background-color 0.1s ease-in-out;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .workspace
+  .switch-control
+  input[type="checkbox"]
+  + label:before {
+  content: "";
+  top: 0.75px;
+  left: 0.75px;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: left 0.1s ease-in-out;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .workspace
+  .switch-control
+  input[type="checkbox"]:checked
+  + label {
+  background-color: #4cd964;
+  border-color: #4cd964;
+}
+
+#iphone
+  .face
+  .screen
+  > .app
+  .container
+  .workspace
+  .switch-control
+  input[type="checkbox"]:checked
+  + label:before {
+  left: calc(100% - 19px);
+}
+
+@keyframes slideOutDown {
+  from {
+    visibility: hidden;
+    top: -300px;
+  }
+
+  to {
+    visibility: visible;
+    top: 30px;
+  }
+}
+
+@keyframes fromBottomToUp {
+  from {
+    visibility: hidden;
+    bottom: -550px;
+  }
+
+  to {
+    visibility: visible;
+    bottom: 30px;
+  }
+}
+
+@keyframes fromUpToBottom {
+  from {
+    visibility: visible;
+    bottom: 30px;
+  }
+
+  to {
+    visibility: hidden;
+    bottom: -550px;
+  }
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 1s ease;
+}
+.fromBottomToUp {
+  animation-name: fromBottomToUp;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fromUpToBottom {
+  animation-name: fromUpToBottom;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes swipeLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.swipeLeftToRight {
+  animation-name: swipeLeftToRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+
+}

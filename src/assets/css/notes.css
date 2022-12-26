@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+#iphone .face .screen > .app.notes .container {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#iphone .face .screen > .app.notes .container {
+  padding: 15px 7px 0px 7px;
+  color: #f8f8f8;
+}
+#iphone .face .screen > .app.notes .container .main {
+  margin-top: -10px;
+}
+#iphone .face .screen > .app.notes .container .main textarea {
+  margin-top: 15px;
+  background-color: transparent !important;
+  width: 250px;
+  height: 450px;
+  border: 0;
+  resize: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: rgba(248, 248, 248, 0.7176470588);
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.notes .container .main textarea:focus {
+  border: 0 !important;
+  outline: none !important;
+}
+#iphone .face .screen > .app.notes .container .main .notes {
+  overflow: auto;
+  height: 480px;
+  margin-top: 10px;
+  padding-right: 8px;
+}
+#iphone .face .screen > .app.notes .container .main .notes .note {
+  padding: 0px 5px;
+  background: #222222;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 260px;
+  cursor: pointer;
+}
+#iphone .face .screen > .app.notes .container .main .notes .note .note-info {
+  padding: 1px 8px;
+  width: 220px;
+  height: 65px;
+}
+#iphone .face .screen > .app.notes .container .main .notes .note .note-info h3 {
+  font-size: 15px;
+  color: #f8f8f8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#iphone .face .screen > .app.notes .container .main .notes .note .note-info p {
+  margin-top: -16px;
+  font-size: 13px;
+  color: rgba(248, 248, 248, 0.7176470588);
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+#iphone .face .screen > .app.notes .container .main input {
+  background-color: transparent !important;
+  border: 0 !important;
+  color: #f8f8f8;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-appearance: none;
+  width: 100%;
+  margin-top: 10px;
+}
+#iphone .face .screen > .app.notes .container .main input:focus {
+  border: 0 !important;
+  outline: none !important;
+}
+#iphone .face .screen > .app.notes .container .main input::-moz-placeholder {
+  color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.notes .container .main input:-ms-input-placeholder {
+  color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.notes .container .main input::placeholder {
+  color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+#iphone .face .screen > .app.notes .container .main input::-webkit-outer-spin-button,
+#iphone .face .screen > .app.notes .container .main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+}/*# sourceMappingURL=notes.css.map */
