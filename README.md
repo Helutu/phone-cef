@@ -1,9 +1,5 @@
-# Vue 3 + Vite
+# About
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-"# phone" 
-"# phone-cef" 
+The phone is made for Rockford studio, but having discontinued it and not receiving any other confirmation, I published this.
+It should be mentioned that there are still many things that need to be changed and certain things have been taken over from certain sources.
