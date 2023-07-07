@@ -1,6 +1,6 @@
 # Despre proiect
 
-Inițial, acest telefon a fost conceput pentru "Rockford Studio", însă în urma desființării companiei, am decis să sa fac acest proiect public.
+Inițial, acest telefon a fost conceput pentru "Rockford Studio", însă în urma desființării companiei, am decis să renunt la acest proiect si prin urmare la publicarea acestuia.
 
 # Contributii
 
@@ -11,6 +11,8 @@ Doresc să subliniez că unele părți din cod au fost inspirate sau preluate di
 Dacă intampinati probleme sau aveti sugestii pentru îmbunătățirea proiectului sau pentru noi actualizări, nu ezitați să ma contactati. În funcție de timpul disponibil, voi incerca sa rezolv totul.
 
 # Prezentare (VIDEO)
+
+[<img src="https://img.youtube.com/vi/grWGZrnN7ck/maxresdefault.jpg" width="50%">](https://youtu.be/grWGZrnN7ck)
 
 
 
