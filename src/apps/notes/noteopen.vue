@@ -2,6 +2,14 @@
 export default {
   props: ["id", "data"],
 
+  methods: {
+    deleteNote() {
+      this.emitter.emit("changeNotePages", "Main");
+      this.emitter.emit("deleteNote", {
+        id: this.id,
+      });
+    },
+  },
   computed: {
     req() {
       return this.data.find((item) => item.id === this.id);
@@ -14,6 +22,7 @@ export default {
   <div class="app notes">
     <div class="container">
       <div class="control-bar" style="margin-top: -10px">
+
         <div
           class="control"
           @click="this.emitter.emit('changeNotePages', 'Main')"
@@ -37,6 +46,7 @@ export default {
           </svg>
         </div>
         <div class="title" style="color: #f8f8f8">View Note</div>
+        <div style="display: flex; align-items: center;">
         <div
           class="control"
           @click="this.emitter.emit('changeNotePages', 'EditNote')"
@@ -56,6 +66,39 @@ export default {
               stroke-linejoin="round"
               stroke-width="1.5"
               d="M19.25 19.25H13.75"
+            ></path>
+          </svg>
+        
+        </div>
+        <svg
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: rgb(233, 176, 54); cursor: pointer"
+            @click="deleteNote()"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12.25 19.25H7.75C6.64543 19.25 5.75 18.3546 5.75 17.25V6.75C5.75 5.64543 6.64543 4.75 7.75 4.75H14L18.25 9V13.25"
+            ></path>
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M19.25 17.25L15.75 17.25"
+            ></path>
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M18 9.25H13.75V5"
             ></path>
           </svg>
         </div>

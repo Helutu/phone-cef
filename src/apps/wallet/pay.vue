@@ -9,9 +9,8 @@ export default {
             page: "Main",
             id: "",
             requests: [
-                { id: 1, name: "Helutu", description: "Lorem ipsum dolort. Pellentesque luctus, eros quis ornare tempor, nisl massa interdum nisl, ut sodales arcu ante sed risus.", sum: 1000000 },
-                { id: 2, name: "dustyhawk", description: "sugi pula", sum: 100000 },
-                { id: 3, name: "Bejan", description: "muie cacatule", sum: 1000 },
+                { id: 1, name: "Helutu", description: "da ba banii", sum: 1000000 },
+                { id: 2, name: "dustyhawk", description: "te pup varu", sum: 100000 },
                 { id: 4, name: "Ahmed", description: "salut", sum: 10000 },
             ],
         };

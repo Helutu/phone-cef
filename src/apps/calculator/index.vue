@@ -36,9 +36,8 @@ export default {
     },
     Equal() {
       this.firstNumber = this.calculate();
-
       this.operator = "";
-      this.secondaryDisplay = this.firstNumber;
+      this.secondaryDisplay = parseFloat(this.firstNumber.toString().slice(0,7));
       this.primaryDisplay = "0";
       this.isPrevOperator = true;
     },

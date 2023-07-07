@@ -10,7 +10,6 @@ export default {
   created() {
     this.emitter.on("changeSettingsPages", (evt) => {
       this.page = evt;
-      console.log(evt)
     });
   },
   data() {
@@ -81,7 +80,7 @@ export default {
                     font-size: 16px;
                   "
                 >
-                  5555555
+                  555555
                 </p>
               </div>
             </div>

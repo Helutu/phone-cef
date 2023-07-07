@@ -6,11 +6,28 @@ export default {
       phonenumber: this.$store.getters.getNumber,
     };
   },
+  watch: {
+    phonenumber(value) {
+      const result = value.replace(/[^0-9]/g, '');
+      if (result !== value) this.phonenumber = result;
+    }
+   },
   methods: {
     addContact() {
       if (this.name === "" || this.phonenumber === "") return;
+      if(this.$store.getters.getContacts.find((con) => con.number === parseInt(this.phonenumber)) || this.$store.getters.getContacts.find((con) => con.name.toLowerCase() === this.name.toLowerCase())) {
+        return this.emitter.emit("PutNotification", {
+          application: "Contacts",
+          description: "Acest numar de telefon sau nume exista deja !",
+        });
+      }
+      this.$store.commit("ADD_CONTACT", {name: this.name, number: parseInt(this.phonenumber)})
       this.$store.commit("CHANGE_NUMBER", "");
       this.$store.commit("CHANGE_PAGE", this.$store.getters.getBeforePage);
+      this.emitter.emit("PutNotification", {
+          application: "Contacts",
+          description: "Contactul a fost adaugat !",
+        });
     },
     cancelContact() {
       this.$store.commit("CHANGE_PAGE", this.$store.getters.getBeforePage);
@@ -92,6 +109,7 @@ export default {
                   placeholder="Phone number"
                   class="inputPhone"
                   v-model="phonenumber"
+                  maxlength="6"
                 />
               </div>
             </div>

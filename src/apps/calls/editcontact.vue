@@ -20,15 +20,26 @@ export default {
       if (this.contact.phoneNumber === "" || this.contact.name === "") {
         return this.emitter.emit("PutNotification", {
           application: "Contacts",
-          description: "You cannot save if you have empty fields!",
+          description: "Nu poti salva daca ai campurile goale !",
+        });
+      }
+      if(this.$store.getters.getContacts.find((con) => con.number === parseInt(this.contact.phoneNumber))) {
+        return this.emitter.emit("PutNotification", {
+          application: "Contacts",
+          description: "Acest numar de telefon exista deja !",
         });
       }
 
       this.$store.commit('CHANGE_PAGE', this.$store.getters.getBeforePage);
-     
+      this.$store.commit('CHANGE_CONTACTS', this.contact)
     },
     deleteContact() {
-      
+      this.$store.commit('DELETE_CONTACT', this.contact.phoneNumber)
+      this.$store.commit('CHANGE_PAGE', this.$store.getters.getBeforePage);
+      this.emitter.emit("PutNotification", {
+          application: "Contacts",
+          description: "Contactul a fost sters !",
+        });
     },
   },
 };

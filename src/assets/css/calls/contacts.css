@@ -117,7 +117,7 @@
 
 #iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper,
 #iphone .face .screen>.app.contacts .container .workspace .call-wrapper {
-    padding: 0 10.5px;
+    /* padding: 0 10.5px; */
     transition: all 0.15s linear;
     cursor: pointer;
     /* here */
@@ -134,13 +134,16 @@
 
 
 #iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper .contact {
-    padding: 11.5px 0;
+    padding: 11.5px 10.5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 15px;
     line-height: 1;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+}
+#iphone .face .screen>.app.contacts .container .workspace .contacts-group .contact-wrapper .contact img {
+    width: 15px;
 }
 
 #iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call {
@@ -149,7 +152,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 11.5px 0;
+    padding: 11.5px;
 }
 
 #iphone .face .screen>.app.contacts .container .workspace .call-wrapper .call .basic-info {

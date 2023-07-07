@@ -15,7 +15,7 @@ export default {
       if (this.title.length === 0 || this.description.length === 0) {
         return this.emitter.emit("PutNotification", {
           application: "Notes",
-          description: "You cannot save if you have empty fields!",
+          description: "Nu poti salva daca ai campurile goale !",
         });
       }
       this.emitter.emit("addNote", {

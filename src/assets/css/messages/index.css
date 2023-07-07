@@ -2,20 +2,20 @@
 #iphone .face .screen > .app.navigator {
   padding: 7.6px 0 0 0;
   height: calc(100% - 7.6px);
-  
+}
+
+#iphone .face .screen > .app .container .workspace.messages {
+  height: 46.5ch;
 }
 
 #iphone .face .screen > .app.messages .container .workspace.chat {
   border-top: none;
   display: flex;
-  flex-direction: column-reverse;
-  /* align-items: center; */
+  flex-direction: column;
   flex-wrap: nowrap;
   padding: 0 10.5px 10px 10.5px;
-  overflow: hidden;
-  height: 58vh;
+  height: 50ch;
   overflow: auto;
-    
 }
 
 #iphone .face .screen > .app.messages .container .workspace .message-wrapper {
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 14.9px 17.5px 14.9px 4.5px;
+  padding: 18px 17.5px 14.9px 4.5px;
   cursor: pointer;
   transition: all 0.15s linear;
   user-select: none;
@@ -316,7 +316,7 @@
   .container
   .workspace.chat
   > :first-child {
-  margin-top: auto !important;
+  /* margin-top: auto !important; */
 }
 
 #iphone .face .screen > .app.messages .container .workspace.chat .datetime {
@@ -370,7 +370,6 @@
   .workspace.chat
   .messages-group.my {
   align-items: flex-end;
-  
 }
 
 #iphone
@@ -442,7 +441,6 @@
   .workspace.chat
   .messages-group.my
   .message {
- 
   color: #ffffff;
   background-color: #53d769;
 }

@@ -10,12 +10,8 @@ export default {
             page: "Main",
             id: "",
             notes: [
-                { id: 1, title: "cacat pisat mazga ulei", description: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" },
-                { id: 2, title: "chelutu muie", description: "Lorem ipsum dolort. Pellentesque luctus, eros quis ornare tempor, nisl massa interdum nisl, ut sodales arcu ante sed risus." },
-                { id: 3, title: "cacat pisat mazga ulei", description: "Lorem ipsum dolort. Pellentesque luctus, eros quis ornare tempor, nisl massa interdum nisl, ut sodales arcu ante sed risus." },
-                { id: 4, title: "cacat pisat mazga ulei", description: "Lorem ipsum dolort. Pellentesque luctus, eros quis ornare tempor, nisl massa interdum nisl, ut sodales arcu ante sed risus." },
-                { id: 5, title: "cacat pisat mazga ulei", description: "Lorem ipsum dolort. Pellentesque luctus, eros quis ornare tempor, nisl massa interdum nisl, ut sodales arcu ante sed risus." },
-                { id: 6, title: "cacat pisat mazga ulei", description: "Lorem ipsum dolort. Pellentesque luctus, eros quis ornare tempor, nisl massa interdum nisl, ut sodales arcu ante sed risus." },
+                { id: 1, title: "Instagram", description: "Follow @misuu.37s on insta" },
+                { id: 2, title: "About me", description: "Iti multumesc mult ca ai instalat acest telefon <3\n\nIn viitor posibil mai multe updateuri" },
             ],
         };
     },
@@ -38,6 +34,10 @@ export default {
         this.emitter.on("addNote", (evt) => {
             this.notes.push({id: this.notes.length+1, ...evt})
         });
+        this.emitter.on("deleteNote", (evt) => {
+            const { id } = evt;
+            this.notes = this.notes.filter(note => note.id !== id)
+        })
         this.emitter.on("editNote", (evt) => {
             const { id, title, description } = evt;
             var note = this.notes.find(b => b.id === id);
@@ -65,6 +65,7 @@ export default {
        
         <div class="main">
             <div class="notes">
+                <div v-if="notes.length === 0">Nu exista nici o notita !</div>
                 <div class="note" 
                     v-for="item in notes" 
                     @click="openNote(item.id)"

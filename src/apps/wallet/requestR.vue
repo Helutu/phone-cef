@@ -1,12 +1,49 @@
 <script>
 export default {
     data() {
-        return { };
+        return {
+            sumInput: "",
+            fromInput: "",
+        };
     },
-
+    watch: {
+        sumInput(value) {
+            const result = value.replace(/[^0-9]/g, '');
+            if (result !== value) this.sumInput = result;
+            if (result.length > 2) this.sumInput = result.substring(0, result.length - 2) + "," + result.substring(result.length - 2);
+        }
+    },
     methods: {
         wallet() {
             this.$store.commit("CHANGE_PAGE", "Wallet");
+        },
+        request() {
+            // This.sumInput, this.fromInput
+            if (this.sumInput === "" || this.fromInput === "") {
+                return this.emitter.emit("PutNotification", {
+                    application: "Wallet",
+                    description: `Completeaza campurile libere!`,
+                });
+            }
+
+            this.$store.commit("CHANGE_PAGE", "Wallet");
+            return this.emitter.emit("PutNotification", {
+                application: "Wallet",
+                description: `Ai solicitat $${this.sumInput} de la  ${this.fromInput} cu succes!`,
+            });
+        },
+        addDashNumber() {
+            let stringValue = this.fromInput.replace(/-/g, ""); // remove existing dashes
+            let formattedValue = "";
+
+            if (stringValue.length > 3) {
+                formattedValue =
+                    stringValue.substring(0, 3) + "-" + stringValue.substring(3, 6);
+            } else {
+                formattedValue = stringValue;
+            }
+
+            this.fromInput = formattedValue;
         },
     },
 };
@@ -32,19 +69,19 @@ export default {
                         <div style="margin-left: 70px; margin-top: -46px;">
                             <p>request from:</p>
                             <div style="margin-top: -15px; margin-left: -2px;">
-                                <input type="tel" placeholder="000-000" maxlength="6">
+                                <input type="tel" placeholder="000-000" maxlength="7" pattern="[0-9]*" v-model="fromInput" @input="addDashNumber">
                             </div>
                         </div>
 
                         <div style="margin-left: 10px;">
                             <p style="margin-top: 35px;">willing to request:</p>
                             <div style="margin-top: -15px; margin-left: -2px;">
-                                <input type="tel" placeholder="$1,000" maxlength="8">
+                                <span style="color: #fff; font-size: 20px;">$</span><input type="tel" pattern="[0-9]*" placeholder="1,000" maxlength="8" v-model="sumInput" @input="formatCash">
                             </div>
                         </div>
 
                         <div style="margin-top: 46px; margin-left: 12px;">
-                            <button class="btn-dusty" style="width: 200px;">
+                            <button class="btn-dusty" style="width: 200px;" @click="request()">
                                 <svg width="25" height="25" fill="none" viewBox="0 0 25 25">
                                     <circle cx="12" cy="12" r="7.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.25 8.75H11.375C10.4775 8.75 9.75 9.47754 9.75 10.375V10.375C9.75 11.2725 10.4775 12 11.375 12H12.625C13.5225 12 14.25 12.7275 14.25 13.625V13.625C14.25 14.5225 13.5225 15.25 12.625 15.25H9.75"></path>

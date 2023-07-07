@@ -46,16 +46,11 @@ export default {
       input: "",
       page: "Main",
       hover: false,
-      contacts: [
-        { name: "Helutu", number: 123123 },
-        { name: "Bejan", number: 454123 },
-        { name: "Robert", number: 412345 },
-      ],
     };
   },
   computed: {
     FilterUserByInput() {
-      return this.contacts.filter((user) =>
+      return this.$store.getters.getContacts.filter((user) =>
         user.name.toLowerCase().includes(this.input.toLowerCase())
       );
     },
@@ -66,13 +61,12 @@ export default {
         return 0;
       }
 
-      return this.contacts.sort(compare);
+      return this.$store.getters.getContacts.sort(compare);
     },
   },
   created() {
     this.emitter.on("changePageHere", (evt) => {
       this.page = evt;
-      console.log(evt)
       this.$store.commit("CHANGE_PAGE", this.$store.getters.getBeforePage );
     });
   },
@@ -141,7 +135,7 @@ export default {
     <Downbar />
   </div>
 
-  <Call :id="id" :data="contacts" v-if="page === 'CallPage'" />
+  <Call :id="id" v-if="page === 'CallPage'" />
   <ViewCall :data="contacts" v-if="page === 'ViewCall'"/>
   
 </template>

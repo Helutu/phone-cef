@@ -1,7 +1,39 @@
 <script>
 export default {
   data() {
-    return { };
+    return { 
+        balance: 13043,
+        transactions: [
+            {
+                author: "Dustyhawk",
+                value: -300,
+                emoji: "👨",
+            },
+            {
+                author: "General store",
+                value: -500,
+                emoji: "🏪",
+                color: "#e462d342"
+            },
+            {
+                author: "Helutu",
+                value: 1000000,
+                emoji: "👨"
+            },
+            {
+                author: "Workspace",
+                value: 3000000,
+                emoji: "🏡",
+                color: "#e4d76242"
+            },
+            {
+                author: "Delearship",
+                value: -1000000,
+                emoji: "🚗",
+                color: "#e4d76242"
+            }
+        ]
+    };
   },
   methods: {
     switchPage(page) {
@@ -29,9 +61,12 @@ export default {
             <div class="main">
 
                 <div class="balance">
-                    <h3>Account balance (USD)</h3>
-                    <p>$13.043</p>
-                </div>
+                        <h3>Account balance (USD)</h3>
+                        <p>{{ (balance).toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD',
+                        }).replace(/\.00$/, '') }}</p>
+                    </div>
 
                 <div class="row">
                     <div>
@@ -67,110 +102,23 @@ export default {
                 </div>
 
                 <div class="transactions">
-                    <div class="transaction">
-                        <div class="emoji">👨</div>
-                        <div class="info-main">
-                            <h3>dustyhawk</h3>
-                            <p>-100$</p>
-                        </div>
-                    </div>
 
-                    <div class="transaction">
+                    <div class="transaction" v-for="transaction in transactions" :key="transaction">
                         <div class="emoji" style="background-color: #e4d76242;">🏡</div>
                         <div class="info-main">
-                            <h3>Workplace</h3>
-                            <p>+300$</p>
+                            <h3>{{ transaction.author }}</h3>
+                            <p>
+                                {{
+                                (transaction.value >= 0 ? "+" : "") +
+                                transaction.value.toLocaleString("en-US", {
+                                    style: "currency",
+                                    currency: "USD",
+                                })
+                                }}
+                             </p>
                         </div>
                     </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #e462d342;">🏪</div>
-                        <div class="info-main">
-                            <h3>General Store</h3>
-                            <p>-127$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji">👨</div>
-                        <div class="info-main">
-                            <h3>Helutu</h3>
-                            <p>+1,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
-                    <div class="transaction">
-                        <div class="emoji" style="background-color: #62e47342;">🚗</div>
-                        <div class="info-main">
-                            <h3>Dealership</h3>
-                            <p>-10,000,000$</p>
-                        </div>
-                    </div>
-
+                    
                     <div style="margin-top: -13px;"></div>
                 </div>
             </div>

@@ -1,27 +1,26 @@
 <script>
 export default {
-  props: ["id", "data"],
+  props: ["id"],
 
   beforeMount() {
     this.emitter.emit(
       "changeBg",
       "linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(-45deg, #304776 0%, #5a97bd 100%)"
     );
-    let phone = this.data.find((phone) => phone.number === this.id);
+    let phone = this.$store.getters.getContacts.find((phone) => phone.number === parseInt(this.id));
     phone ? (this.name = phone.name) : (this.name = this.id);
     this.playSound();
+    this.$store.commit("ADD_RECENT_CALL", {number: parseInt(this.id), type: "Incoming", time: "12:32"})
   },
   created() {
     this.emitter.on("Responde", (evt) => {
-      console.log(evt);
       const phone = evt;
 
       this.audio.pause();
       this.audio.currentTime = 0;
-
       this.doInterval();
-
       this.name = phone;
+
     });
   },
   methods: {

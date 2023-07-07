@@ -5,7 +5,7 @@ export default {
       this.emitter.emit('changeBgWp', id)
       this.emitter.emit("PutNotification", {
           application: "Settings",
-          description: "The background has been set!",
+          description: "Backgroundul a fost setat !",
         });
     },
   },

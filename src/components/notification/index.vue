@@ -89,7 +89,7 @@ li:first-child {
   /* top: -3.5vh; */
   padding-left: 10px;
   padding-bottom: 10px;
-  width: 30vh;
+  width: 31vh;
   left: 2px;
   margin-top: 0;
 }

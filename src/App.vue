@@ -109,11 +109,9 @@ export default {
     });
     this.emitter.on("changeBgWp", (evt) => {
       this.wallpaperBackground = `url(/src/assets/backgrounds/bg${evt}.png)`;
-      console.log(evt);
     });
 
     this.emitter.on("downbarShow", (evt) => {
-      console.log("downbarShow: " + evt);
       this.downbar = evt;
     });
 

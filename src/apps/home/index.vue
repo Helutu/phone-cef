@@ -38,7 +38,7 @@ export default {
         {
           name: "Messages",
           icon: "message.svg",
-          notifications: 25,
+          notifications: 1,
         },
         {
           name: "Contacts",

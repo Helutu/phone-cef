@@ -7,7 +7,7 @@ export default {
   
   methods: {
     getMissedCalls() {
-      this.missedCalls = this.calls.filter((e) => e.type === "Missed");
+      this.missedCalls = this.$store.getters.getRecentCalls.filter((e) => e.type === "Missed");
     },
     Call(id) {
       this.$store.commit("SET_BEFORE_PAGE", [
@@ -17,8 +17,21 @@ export default {
       this.$store.commit("CHANGE_PAGE", "Contacts");
       this.$store.commit("CHANGE_NUMBER", id); 
     },
+    getNameFromNumber(number) {
+      let contact = this.$store.getters.getContacts.find(
+        (contact) => contact.number === parseInt(number)
+      )
+      if(contact) {
+        return contact.name
+      } else {
+        return number;
+      }
+    },
     goToDetails(call) {
-      if (call.name === undefined) {
+      let contact = this.$store.getters.getContacts.find(
+        (contact) => contact.number === parseInt(call.number)
+      )
+      if (contact === undefined) {
         this.$store.commit("CHANGE_PAGE", "Addcontact");
         this.$store.commit("CHANGE_NUMBER", call.number);
         return;
@@ -28,7 +41,7 @@ export default {
         this.$store.getters.getPageState,
       ]);
       this.$store.commit("CHANGE_PAGE", "DetailsContact");
-      this.$store.commit("CHANGE_CONTACT", { name: call.name, number: call.number });
+      this.$store.commit("CHANGE_CONTACT", { name: this.getNameFromNumber(call.number), number: call.number });
     },
   },
   created() {
@@ -37,56 +50,7 @@ export default {
   data() {
     return {
       page: "All",
-      calls: [
-        {
-          name: "Bejan",
-          number: 123123,
-          type: "Incoming",
-          time: "13:18",
-        },
-        {
-          number: 544123,
-          type: "Incoming",
-          time: "13:18",
-        },
-        {
-          number: 555555,
-          type: "Missed",
-          time: "13:18",
-        },
-        {
-          name: "Helutu",
-          number: 551223,
-          type: "Incoming",
-          time: "13:18",
-        },
-        {
-          number: 123543,
-          type: "Incoming",
-          time: "13:18",
-        },
-        {
-          number: 654123,
-          type: "Missed",
-          time: "13:18",
-        },
-        {
-          name: "Boss",
-          number: 555555,
-          type: "Incoming",
-          time: "13:18",
-        },
-        {
-          number: 123456,
-          type: "Incoming",
-          time: "13:18",
-        },
-        {
-          number: 544321,
-          type: "Missed",
-          time: "13:18",
-        },
-      ],
+      calls: [],
       missedCalls: [],
     };
   },
@@ -129,7 +93,7 @@ export default {
         >
           <div class="call missed">
             <div class="basic-info" @click="Call(call.number)">
-              <div class="caller">{{ call.name || call.number }}</div>
+              <div class="caller">{{ getNameFromNumber(call.number) }}</div>
               <div class="call-type">{{ call.type }}</div>
             </div>
             <div class="datetime">{{ call.time }}</div>
@@ -145,10 +109,10 @@ export default {
       </div>
 
       <div class="workspace" v-if="this.page === 'All'">
-        <div class="call-wrapper" v-for="(call, index) in calls" :key="index">
+        <div class="call-wrapper" v-for="(call, index) in this.$store.getters.getRecentCalls" :key="index">
           <div class="call" :class="{ missed: call.type === 'Missed' }">
             <div class="basic-info" @click="Call(call.number)">
-              <div class="caller">{{ call.name || call.number }}</div>
+              <div class="caller">{{ getNameFromNumber(call.number) }}</div>
               <div class="call-type">{{ call.type }}</div>
             </div>
             <div class="datetime">{{ call.time }}</div>

@@ -1,79 +1,78 @@
 <script>
+import moment from "moment";
 export default {
-  props: ["id"],
+  props: ["id", "phonenumber", "username"],
   beforeMount() {
     if (this.number === null) {
-      this.number = this.id;
+      this.number = this.phonenumber;
+      let contact = this.$store.getters.getContacts.find(
+        (contact) => contact.number === parseInt(this.number)
+      )
+
+      if(contact) this.name = contact.name;
+      if(this.username.length > 0) this.name = this.username
     }
   },
   created() {
+    
     this.emitter.on("PutIdSMS", (evt) => {
       this.number = evt;
-      console.log("putidsms: " + this.number);
+      let contact = this.$store.getters.getContacts.find(
+        (contact) => contact.number === parseInt(evt)
+      )
+      if(contact) return this.name = contact.name;
+      if(this.username.length > 0) this.name = this.getNameFromNumber(evt)
     });
   },
+  computed: {
+    sortedMessages() {
+
+      return this.$store.getters.getMessages
+      .filter(message => message.author === this.name)
+      .sort((a, b) => new Date(a.time) - new Date(b.time));
+    },
+  },
+
   methods: {
-    formatData(data) {
-      
+    getNameFromNumber(number) {
+      let contact = this.$store.getters.getContacts.find(
+        (contact) => contact.number === parseInt(number)
+      )
+      if(contact) {
+        return contact.name
+      } else {
+        return number;
+      }
     },
     sendMessage() {
-      this.messages.push({from: "me", time: new Date(), text: this.message})
+      this.$store.commit('ADD_MESSAGE', { from: "me", time: new Date(), text: this.message, author: this.name  })
       this.message = "";
+      this.$nextTick(() => {
+        const container = this.$refs.messageContainer;
+        container.scrollTop = container.scrollHeight;
+      });
+    },
+    shouldDisplayTime(index) {
+      if (index === 0) return true;
+
+      const prevMessage = this.sortedMessages[index - 1];
+      const currentMessage = this.sortedMessages[index];
+      if (
+        moment(currentMessage.time).format("DD-MM-YYYY") !==
+        moment(prevMessage.time).format("DD-MM-YYYY")
+      ) {
+        return true;
+      }
+
+      return false;
     },
   },
   data() {
     return {
       number: null,
-      counter: 3,
-      name: "Fleeca Bank",
+      counter: 0,
+      name: "",
       message: "",
-      messages: [
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "him",
-          time: new Date(),
-          text: "Connect me browtf casds dsadasd sa as sad sa",
-        },
-        {
-          from: "me",
-          time: new Date(),
-          text: "Salut",
-        },
-      ],
     };
   },
 };
@@ -98,15 +97,15 @@ export default {
               ></path>
             </svg>
           </div>
-          <div class="counter">3</div>
+          <div class="counter" v-if="counter > 0">{{ counter }}</div>
         </div>
-        <div class="title">{{ number }}</div>
+        <div class="title">{{ name || number }}</div>
         <div class="control inactive"></div>
       </div>
-      <div class="workspace chat" id="chat">
-        <div v-for="message in messages.slice().reverse()" v-bind:key="message">
-          <div class="datetime" v-if="message.time">
-            <timeago :datetime="message.time"></timeago>
+      <div class="workspace chat" id="chat" ref="messageContainer">
+        <div v-for="(message, index) in sortedMessages" :key="index">
+          <div class="datetime" v-if="shouldDisplayTime(index)">
+            {{ $moment(message.time).calendar() }}
           </div>
           <div class="messages-group" :class="{ my: message.from === 'me' }">
             <div class="message">{{ message.text }}</div>
@@ -123,7 +122,12 @@ export default {
         </svg>
       </div>
       <div class="input-group">
-        <input type="text" placeholder="Text Message" v-model="message" />
+        <input
+          type="text"
+          placeholder="Text Message"
+          v-model="message"
+          @keyup.enter="sendMessage()"
+        />
         <button class="send" @click="sendMessage()">
           <div class="icon">
             <img src="../../assets/icons/arrow.svg" alt="" />

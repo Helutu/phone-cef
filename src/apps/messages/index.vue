@@ -2,38 +2,91 @@
 import message from "./message.vue";
 export default {
   beforeMount() {
-    if(this.$store.getters.getBeforePage === "DetailsContact") {
+    this.updateSms();
+
+  this.sms = this.sms.reverse();
+    if (this.$store.getters.getBeforePage === "DetailsContact") {
       this.page = "Message";
     }
+    this.sms = this.sms.map((response) => {
+      const contact = this.$store.getters.getContacts.find(
+        (contact) => contact.number === response.phoneNumber
+      )
+      if (contact) {
+        return { ...response, name: contact.name };
+      } else {
+        return response;
+      }
+    });
   },
   components: { message },
-  methods: {
-    OpenSMS(id) {
-      this.page = "Message";
-      this.id = id;
-      console.log(this.page)
+  mounted() {
+    this.updateSms();
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.updateSms();
+    });
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.updateSms();
+    next();
+  },
+  watch: {
+    '$store.getters.getMessages': {
+      immediate: true,
+      handler() {
+        this.updateSms();
+      }
     },
+  },
+  computed: {
+    filtredUsers() {
+      
+      if(this.input) {
+        return this.sms.filter((sms) => {
+          return sms.author.toLowerCase().startsWith(this.input.toLowerCase())
+        })
+      } else {
+        return this.sms;
+      }
+    },
+  },
+  methods: {
+    OpenSMS(name) {
+      this.page = "Message";
+      if(name) this.name = name;
+    },
+    getNameFromNumber(number) {
+      this.$store.getters.getContacts.find(
+        (contact) => contact.number === parseInt(number)
+      ).name;
+    },
+    updateSms() {
 
+      let messages = [...this.$store.getters.getMessages];
+      messages.sort((a, b) => new Date(b.time) - new Date(a.time));
+
+      let uniqueAuthors = [...new Set(messages.map(message => message.author))];
+      let newSms = uniqueAuthors.map(author => {
+        return messages.find(message => message.author === author);
+      });
+      this.sms = newSms;
+    },
   },
   created() {
     this.emitter.on("changePageSMS", (evt) => {
+      this.updateSms()
       this.page = evt;
     });
   },
   data() {
     return {
       page: "Main",
-      id: null,
-      sms: [
-        {
-          id: "1234",
-          name: "Fleeca Bank",
-          phoneNumber: "555 555",
-          message: "ECMS6235 20:12 Purchase $260 MASTERCARD Balance: $129,570",
-          checked: false,
-          date: "Yesterday",
-        },
-      ],
+      phoneNumber: null,
+      name: "",
+      input: "",
+      sms: [],
     };
   },
 };
@@ -54,18 +107,18 @@ export default {
               ></path>
             </svg>
           </div>
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search"  v-model="input" />
         </div>
       </div>
-      <div class="workspace">
+      <div class="workspace messages" v-if="sms.length">
         <div
           class="message-wrapper"
-          v-for="item in sms"
+          v-for="item in filtredUsers"
           v-bind:key="item"
-          @click="OpenSMS(item.id)"
+          @click="OpenSMS(item.author)"
         >
           <div class="dot-block">
-            <div class="dot" v-if="!item.checked"></div>
+            <div class="dot" v-if="item.checked"></div>
           </div>
           <div class="icon-wrapper">
             <div class="icon img">
@@ -87,9 +140,9 @@ export default {
           </div>
           <div class="message">
             <div class="basic-info">
-              <div class="sender">{{ item.name }}</div>
+              <div class="sender">{{ item.author || item.phoneNumber }}</div>
               <div class="info">
-                <div class="datetime">{{ item.date }}</div>
+                <div class="datetime">{{ $moment(item.date).calendar() }}</div>
                 <div class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 9">
                     <path
@@ -100,14 +153,14 @@ export default {
               </div>
             </div>
             <div class="message-text">
-              <p>{{ item.message }}</p>
+              <p>{{ item.text }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <message :id="id" v-if="page === 'Message'" />
+  <message :id="id" :username="name" v-if="page === 'Message'" />
 </template>
 
 <style scoped src="../../assets/css/messages/index.css"></style>
