@@ -1,6 +1,6 @@
 # Despre proiect
 
-Inițial, acest telefon a fost conceput pentru "Rockford Studio", însă în urma desființării companiei, am decis să îl fac public.
+Inițial, acest telefon a fost conceput pentru "Rockford Studio", însă în urma desființării companiei, am decis să sa fac acest proiect public.
 
 # Contributii
 
