@@ -10,4 +10,8 @@ Doresc să subliniez că unele părți din cod au fost inspirate sau preluate di
 
 Dacă intampinati probleme sau aveti sugestii pentru îmbunătățirea proiectului sau pentru noi actualizări, nu ezitați să ma contactati. În funcție de timpul disponibil, voi incerca sa rezolv totul.
 
+# Prezentare (VIDEO)
+
+
+
 
