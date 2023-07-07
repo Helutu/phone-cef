@@ -12,8 +12,5 @@ Dacă intampinati probleme sau aveti sugestii pentru îmbunătățirea proiectul
 
 # Prezentare (VIDEO)
 
-[<img src="https://img.youtube.com/vi/grWGZrnN7ck/maxresdefault.jpg" width="50%">](https://youtu.be/grWGZrnN7ck)
-
-
-
+https://github.com/Helutu/phone-cef/assets/56837883/b842444f-851d-4f1a-a566-49d4d8febfc2
 
