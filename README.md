@@ -12,8 +12,8 @@ Dacă intampinati probleme sau aveti sugestii pentru îmbunătățirea proiectul
 
 # FAQ ?
 
-  - Cum pot deschide/inchide telefonul? 
-    Pentru a deschide telefonul apasa pe tasta Arrow UP, si pentru a-l inchide pe Arrow Down.
+  ### Cum pot deschide/inchide telefonul?
+  - Pentru a deschide telefonul apasa pe tasta Arrow UP, si pentru a-l inchide pe Arrow Down.
 
 # Prezentare (VIDEO)
 
